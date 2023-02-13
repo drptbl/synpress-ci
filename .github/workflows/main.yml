@@ -21,7 +21,7 @@ jobs:
         with:
           start: pm2 serve dist 3000 --spa
           build: npm run build
-          command: npm e2e:ci
+          command: npm run e2e:ci
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
           browser: chrome

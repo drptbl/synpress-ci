@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "e2e": "env-cmd -f .env synpress run",
-    "e2e:ci": "synpress run --record --parallel"
+    "e2e:ci": "synpress run"
   },
   "dependencies": {
     "@synthetixio/synpress": "^3.1.0",
