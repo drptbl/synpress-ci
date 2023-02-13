@@ -26,6 +26,7 @@ jobs:
           wait-on-timeout: 120
           browser: chrome
           spec: tests/e2e/specs/*
+          headed: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
