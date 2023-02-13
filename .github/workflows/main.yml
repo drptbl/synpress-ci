@@ -66,7 +66,7 @@ jobs:
             ${{ runner.os }}-buildx-
       - name: Run e2e tests
         run: |
-          docker-compose -f docker-compose.ci.yml --env-file medium-res.env --profile ngrok up --build --exit-code-from synpress
+          docker-compose -f docker-compose.ci.yml --env-file medium-res.env up --build --exit-code-from synpress
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
