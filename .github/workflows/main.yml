@@ -7,11 +7,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install serve
-        run: npm i -g pm2
+      - name: Install deps
+        run: npm i
 
       - name: Build app
         run: npm run build
+
+      - name: Install serve
+        run: npm i -g pm2
 
       - name: Run e2e tests
         uses: cypress-io/github-action@v5
