@@ -10,10 +10,14 @@ jobs:
       - name: Install serve
         run: npm i -g pm2
 
+      - name: Build app
+        run: npm run build
+
       - name: Run e2e tests
         uses: cypress-io/github-action@v5
         with:
           start: pm2 serve dist 3000 --spa
+          build: npm run build
           command: npm e2e:ci
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
