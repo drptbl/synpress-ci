@@ -9,7 +9,7 @@
     "e2e": "env-cmd -f .env synpress run",
     "e2e:ci": "synpress run",
     "start:server": "serve dist",
-    "test:e2e": "start-server-and-test 'npm run start:server' http-get://localhost:3000 'synpress run'"
+    "test:e2e": "start-server-and-test 'npm run build && npm run start:server' http-get://localhost:3000 'synpress run'"
   },
   "dependencies": {
     "@synthetixio/synpress": "^3.1.0",
